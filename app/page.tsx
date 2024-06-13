@@ -14,12 +14,12 @@ import { useState } from "react";
 
 export default function Home() {
   const [tone, setTone] = useState("professional");
-  const [subject, setSubject] = useState("");
+  const [context, setContext] = useState("");
   const [email, setEmail] = useState("");
   const [isGenerating, setIsGenerating] = useState(false);
   const [copied, setCopied] = useState(false);
 
-  async function handleGenerate(tone: String, subject: String) {
+  async function handleGenerate(tone: String, context: String) {
     setIsGenerating(true);
     const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY || "");
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
@@ -30,7 +30,7 @@ Hiring Managers
 Startup Founders 
 Software Engineers
 Tone:${tone}
-Content:${subject}
+Content:${context}
 Based on the content Generate a cold email (it should be easy to read with multiple lines break), about the content. Do not include subject.
 Email should be short and consise
 Output in text only do not give markdown code.
@@ -56,14 +56,14 @@ Output in text only do not give markdown code.
         <div className="max-w-xl w-full">
           <div className="flex items-center space-x-3">
             <p className="text-left font-medium">
-              1. What is the subject?
+              1. What is the context?
             </p>
           </div>
           <textarea
             className="w-full rounded-md border-gray-300 border-2 shadow-sm focus:border-black focus:ring-black my-5 p-4"
-            placeholder={'I am reaching out to express my interest in...'}
+            placeholder={'Provide the context for your email here...'}
             onChange={(e) => {
-              setSubject(e.target.value);
+              setContext(e.target.value);
             }}
           />
           <div className="flex mb-5 items-center space-x-3">
@@ -87,7 +87,7 @@ Output in text only do not give markdown code.
           <Button
             className="w-full"
             disabled={isGenerating}
-            onClick={() => handleGenerate(tone, subject)}
+            onClick={() => handleGenerate(tone, context)}
           >
             {isGenerating ? "Generating..." : "Generate"}
           </Button>
