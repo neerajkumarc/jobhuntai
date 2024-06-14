@@ -1,23 +1,35 @@
-import Link from 'next/link';
-import Github from './Github';
+"use client"
+import Link from "next/link";
+import { Button } from "./ui/button";
+import { usePathname } from "next/navigation";
+
+
 
 export default function Header() {
+  const pathname = usePathname()
+  const links = [
+    { text: "MY DASHBOARD", href: "/dashboard" },
+    { text: "AI COVER LETTER", href: "/dashboard/cover-letter-generator" },
+    { text: "AI COLD EMAIL", href: "/dashboard/cold-email-generator" },
+    { text: "AI INTERVIEW", href: "/dashboard/create-resume" },
+  ];
   return (
-    <header className="flex justify-between items-center w-full mt-5 border-b-2 pb-7 sm:px-4 px-2">
-      <Link href="/" className="flex space-x-3">
-        <h1 className="sm:text-3xl text-2xl font-bold ml-2 tracking-tight">
-        jobhunt.ai
-        </h1>
+    <nav className="sticky left-0 top-0 h-screen lg:w-[20vw] flex flex-col p-5 gap-4 border border-black">
+      <span className="text-3xl font-bold">ResuMate</span>
+      <Link href="/create-resume">
+        <Button className="w-full py-2">CREATE NEW RESUME</Button>
       </Link>
-      <a
-        className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-4 py-2 text-sm text-gray-600 shadow-md transition-colors hover:bg-gray-100"
-        href="https://github.com/neerajkumarc"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Github />
-        <p>Star on GitHub</p>
-      </a>
-    </header>
+      <ul className="w-full flex flex-col items-start justify-start gap-4 py-2">
+        {links.map((link) => (
+          <li className={`w-full px-2 py-1 hover:bg-gray-300 p-2 rounded-md ${pathname==link.href && "bg-gray-300"}`} key={link.text}>
+            <Link href={link.href}>{link.text}</Link>
+          </li>
+        ))}
+        
+      </ul>
+      <Button className="mt-auto mb-4 py-2 border border-black w-full">
+        LOGOUT/ LOGIN
+      </Button>
+    </nav>
   );
 }
