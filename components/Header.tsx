@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { usePathname } from "next/navigation";
+import Logout from "./Logout";
 
 
 
@@ -27,9 +28,7 @@ export default function Header() {
         ))}
         
       </ul>
-      <Button className="mt-auto mb-4 py-2 border border-black w-full">
-        LOGOUT/ LOGIN
-      </Button>
+      <Logout />
     </nav>
   );
 }
