@@ -24,12 +24,12 @@ export default function Home() {
             <div>
               <div className='mx-auto max-w-6xl px-6 lg:px-8'>
                 <div className='flow-root sm:mt-24'>
-                  <div className='-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4'>
+                  <div className='-m-2 rounded-xl bg-gray-900/5 dark:bg-gray-200 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4'>
                   <Image
                 src='/ai-tools-preview.png'
                 alt='AI tools preview'
-                width={1413}
-                height={813}
+                width={1259}
+                height={829}
                 quality={100}
                 className='rounded-md bg-white shadow-2xl ring-1 ring-gray-900/10'
               />
@@ -100,14 +100,14 @@ export default function Home() {
 
         <div className='mx-auto max-w-6xl px-6 lg:px-8'>
           <div className='mt-16 flow-root sm:mt-24'>
-            <div className='-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4'>
+            <div className='-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4 flex items-center justify-center'>
               <Image
                 src='/frame.gif'
                 alt='AI tools preview'
                 width={840}
                 height={457}
                 quality={100}
-                className='rounded-md bg-white shadow-2xl ring-1 ring-gray-900/10'
+                className='rounded-md bg-white shadow-2xl p-4 ring-1 ring-gray-900/10'
               />
             </div>
           </div>
