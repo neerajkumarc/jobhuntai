@@ -28,8 +28,8 @@ const Nav = () => {
       ];
      
       return (
-        <div className="sticky top-2 z-50 flex items-center justify-center m-2">
-          <div className='dark:bg-black/80 bg-white/80 p-2 rounded-full'>
+        <div className="md:sticky md:top-2 md:z-50 flex items-center justify-center m-2">
+          <div className='dark:bg-black/80 bg-white/80 p-2 rounded-full text-xs md:text-lg'>
           <Tabs tabs={tabs} />
           </div>
         </div>
