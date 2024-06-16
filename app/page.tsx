@@ -1,12 +1,9 @@
 "use client"
 
 import Pill from "@/components/ui/pill";
-import { Button } from "@/components/ui/button"
-import Link from "next/link";
 import Image from "next/image";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { useRouter } from "next/navigation";
-import { Tabs } from "@/components/ui/tabs";
 export default function Home() {
   const router = useRouter()
   return (
@@ -28,14 +25,14 @@ export default function Home() {
               <div className='mx-auto max-w-6xl px-6 lg:px-8'>
                 <div className='flow-root sm:mt-24'>
                   <div className='-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4'>
-                    <Image
-                      src='/job-tools-preview.png'
-                      alt='product preview'
-                      width={1451}
-                      height={817}
-                      quality={100}
-                      className='rounded-md bg-white p-2 sm:p-8 md:p-20 shadow-2xl ring-1 ring-gray-900/10'
-                    />
+                  <Image
+                src='/ai-tools-preview.png'
+                alt='AI tools preview'
+                width={1413}
+                height={813}
+                quality={100}
+                className='rounded-md bg-white shadow-2xl ring-1 ring-gray-900/10'
+              />
                   </div>
                 </div>
               </div>
@@ -105,12 +102,12 @@ export default function Home() {
           <div className='mt-16 flow-root sm:mt-24'>
             <div className='-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4'>
               <Image
-                src='/ai-tools-preview.png'
+                src='/frame.gif'
                 alt='AI tools preview'
-                width={1523}
-                height={793}
+                width={840}
+                height={457}
                 quality={100}
-                className='rounded-md bg-white p-2 sm:p-8 md:p-20 shadow-2xl ring-1 ring-gray-900/10'
+                className='rounded-md bg-white shadow-2xl ring-1 ring-gray-900/10'
               />
             </div>
           </div>
@@ -143,7 +140,7 @@ export default function Home() {
           </div>
 
           <div className="w-full dark:bg-zinc-800 dark:text-white bg-zinc-200 p-6 rounded-2xl text-center my-4">
-            <div className="text-2xl sm:text-5xl font-bold justify-center gap-2"><div className="h-12 w-12 bg-green-500 rounded-full text-xl flex items-center justify-center">📈</div>60%</div>
+            <div className="text-2xl sm:text-5xl font-bold flex justify-center gap-2"><div className="h-12 w-12 bg-green-500 rounded-full text-xl flex items-center justify-center">📈</div>60%</div>
             <p className="p-2">more job offers received using AI-enhanced applications</p>
           </div>
         </div>
