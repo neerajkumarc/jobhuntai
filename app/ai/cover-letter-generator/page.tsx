@@ -35,6 +35,7 @@ Startup Founders
 Software Engineers
 Tone:${tone}
 Jobdescription:${jobdescription}
+If job description is not valid return "⚠️ Please provide a vaild job description"
 Based on the Job description craft a convicing, genuine cover-letter for better success rate. Do not include subject for the email.
 Email should be short and consise
 Output in text only do not give markdown code.

@@ -33,8 +33,9 @@ Hiring Managers
 Startup Founders 
 Software Engineers
 Tone:${tone}
-Content:${context}
-Based on the content craft a solid, convincing and genuine cold email inspired from fusion of Steve Jobs and Jordan Belfort with sweet words. Do not include subject for the email.
+context:${context}
+If context is not valid return "⚠️ Please provide a vaild context"
+Based on the context craft a solid, convincing and genuine cold email inspired from fusion of Steve Jobs and Jordan Belfort with sweet words. Do not include subject for the email.
 Email should be short and consise
 Output in text only do not give markdown code.
 `;

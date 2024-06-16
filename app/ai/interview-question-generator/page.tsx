@@ -29,6 +29,7 @@ export default function InterviewQuestionGenerator() {
     });
     const prompt = `Goal: Generate interview questions for a job role based on the job description.
 Job Description: ${jobDescription}
+If job description is not valid return "⚠️ Please provide a vaild job description"
 Difficulty: ${difficulty}
 Generate a set of questions and answers(that a skilled candidate would answer) that cover technical, behavioral, and situational aspects relevant to the role described. Ensure the questions are varied and appropriate for the specified difficulty level.
 strictly follow following markdown template, and provide output (do not add any extra markdown keywords rest all should be plain text only use the provided format), question number can be as many as you can genarate :
