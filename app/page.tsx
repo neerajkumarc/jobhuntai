@@ -141,7 +141,7 @@ export default function Home() {
           </div>
 
           <div className="w-full dark:bg-zinc-800 dark:text-white bg-zinc-200 p-6 rounded-2xl text-center my-4">
-            <div className="text-2xl sm:text-5xl font-bold flex justify-center gap-2"><div className="h-12 w-12 bg-green-500 rounded-full text-xl flex items-center justify-center">📈</div>60%</div>
+            <div className="text-2xl sm:text-5xl font-bold flex md:justify-center gap-2"><div className="h-12 w-12 bg-green-500 rounded-full text-xl flex items-center justify-center">📈</div>60%</div>
             <p className="p-2">more job offers received using AI-enhanced applications</p>
           </div>
         </div>
