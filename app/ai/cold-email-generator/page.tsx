@@ -47,7 +47,7 @@ Output in text only do not give markdown code.
   return (
     <div className="flex max-w-5xl mx-auto flex-col justify-center min-h-screen py-2">
       <main className="flex flex-1 w-full flex-col items-center justify-start text-center px-4 mt-4">
-      <Pill text={"732 cold emails generated so far"} />
+      <Pill text={"Seamlessly craft effective cold emails. 🌟"} />
         <h1 className="sm:text-6xl text-4xl max-w-[608px] font-bold text-center m-4">
           AI Cold Email Generator
         </h1>

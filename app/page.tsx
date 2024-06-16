@@ -107,6 +107,7 @@ export default function Home() {
                 width={840}
                 height={457}
                 quality={100}
+                unoptimized
                 className='rounded-md bg-white shadow-2xl p-4 ring-1 ring-gray-900/10'
               />
             </div>
