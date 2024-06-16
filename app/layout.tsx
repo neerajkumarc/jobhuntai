@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+import { ThemeProvider } from "@/components/theme-provider"
+import clsx from "clsx";
+import Footer from "@/components/Footer";
+import Nav from "@/components/Nav";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -16,7 +19,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={clsx(inter.className, "dark:bg-black bg-white  dark:bg-dot-white/[0.2] bg-dot-black/[0.2]")}> <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
+        <Nav/>
+        {children}
+        <Footer/>
+      </ThemeProvider></body>
     </html>
   );
 }
