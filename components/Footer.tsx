@@ -1,6 +1,6 @@
 "use client"
 import MaxWidthWrapper from './MaxWidthWrapper';
-import Link from 'next/link';
+import { LinkPreview } from "@/components/ui/link-preview";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const Footer = () => {
@@ -32,6 +32,12 @@ const Footer = () => {
           <div className='text-center md:text-left'>
             <p className='text-sm text-muted-foreground'>
               &copy; {new Date().getFullYear()} All Rights Reserved
+            </p>
+            <p className='text-sm text-muted-foreground'>
+            Powered by{" "}
+        <LinkPreview url="https://gemini.google.com/" className="font-bold">
+          Gemini AI.
+        </LinkPreview>
             </p>
           </div>
 
