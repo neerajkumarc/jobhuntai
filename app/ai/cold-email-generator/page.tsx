@@ -1,6 +1,4 @@
 "use client";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import {
   Select,
@@ -11,6 +9,7 @@ import {
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import Pill from "@/components/ui/pill";
 
 export default function ColdEmailGenerator() {
   const [tone, setTone] = useState("professional");
@@ -45,12 +44,10 @@ Output in text only do not give markdown code.
   }
 
   return (
-    <div className="flex max-w-5xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
-      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20">
-        <p className="border rounded-2xl py-1 px-4 text-slate-500 text-sm mb-5 hover:scale-105 transition duration-300 ease-in-out">
-          <b>237</b> cold emails generated so far
-        </p>
-        <h1 className="sm:text-6xl text-4xl max-w-[608px] font-bold text-slate-900 text-center">
+    <div className="flex max-w-5xl mx-auto flex-col justify-center min-h-screen py-2">
+      <main className="flex flex-1 w-full flex-col items-center justify-start text-center px-4 mt-4">
+      <Pill text={"732 cold emails generated so far"} />
+        <h1 className="sm:text-6xl text-4xl max-w-[608px] font-bold text-center m-4">
           AI Cold Email Generator
         </h1>
         <p className="m-4 font-medium">
