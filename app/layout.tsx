@@ -29,6 +29,7 @@ export default function RootLayout({
         {children}
         <Footer/>
       </ThemeProvider></body>
+      <script defer src="https://umami-false-analytics.vercel.app/script.js" data-website-id="0b1061ab-08e6-445e-8cda-3d3613362d27"></script>
     </html>
   );
 }
